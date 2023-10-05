@@ -1,5 +1,3 @@
-import React from "react";
+import express from "express";
 
-export default function app() {
-  return <div>app</div>;
-}
+export const app = express();
