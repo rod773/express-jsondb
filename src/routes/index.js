@@ -5,7 +5,7 @@ const router = Router();
 const books = [];
 
 router.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("index.ejs", { books });
 });
 
 router.get("/new-entry", (req, res) => {
@@ -14,8 +14,14 @@ router.get("/new-entry", (req, res) => {
 
 router.post("/new-entry", (req, res) => {
   console.log(req.body);
+
   console.log(req.headers["content-type"]);
-  res.send(req.body);
+
+  const newBook = req.body;
+
+  books.push(newBook);
+
+  res.send(books);
 });
 
 export default router;
