@@ -8,23 +8,25 @@
 
 <body>
     <div class="container p-4">
-        <form class="card card-body" method="POST" target="/new-entry">
+        <form class="card card-body" method="POST" action="/new-entry">
             <div class="mb-3 form-group">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" placeholder="Enter New Title" autofocus required>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Enter New Title" autofocus
+                    required>
             </div>
             <div class="mb-3 form-group">
                 <label for="autor" class="form-label">Autor</label>
-                <input type="text" class="form-control" id="autor" placeholder="Enter New Autor" required>
+                <input type="text" class="form-control" id="autor" name="autor" placeholder="Enter New Autor" required>
             </div>
             <div class="mb-3 form-group">
                 <label for="imagen" class="form-label">Imagen</label>
-                <input type="text" class="form-control" id="imagen" placeholder="Enter New Imagen Url" required>
+                <input type="text" class="form-control" id="imagen" name="imagen" placeholder="Enter New Imagen Url"
+                    required>
             </div>
             <div class="mb-3 form-group">
                 <label for="descripcion" class="form-label">Description</label>
-                <textarea class="form-control" id="descripcion" placeholder="Enter Description" required
-                    rows="3"></textarea>
+                <textarea class="form-control" id="descripcion" name="descripcion" placeholder="Enter Description"
+                    required rows="3"></textarea>
             </div>
             <input type="submit" value="Save Book" class="btn btn-primary" />
         </form>
