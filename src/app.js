@@ -4,8 +4,6 @@ import { fileURLToPath } from "url";
 import morgan from "morgan";
 import router from "./routes/index.js";
 
-import bodyParser from "body-parser";
-
 const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
@@ -29,14 +27,6 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
-
-// app.use(
-//   bodyParser.urlencoded({
-//     extended: true,
-//   })
-// );
-
-// app.use(bodyParser.json());
 
 // routes
 
