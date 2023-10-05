@@ -25,6 +25,9 @@ app.set("view engine", "ejs");
 app.use(cors);
 
 app.use(morgan("dev"));
+
+app.use(express.urlencoded({ extended: false }));
+
 // routes
 
 // stattic
