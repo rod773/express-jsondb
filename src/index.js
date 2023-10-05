@@ -1,7 +1,7 @@
-import { app } from "../src/app.js";
+import app from "../src/app.js";
 
 async function main() {
-  await app.listen(5000);
+  await app.listen(app.get("port"));
   console.log("http://localhost:5000");
 }
 
