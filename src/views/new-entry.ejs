@@ -8,7 +8,7 @@
 
 <body>
     <div class="container p-4">
-        <form class="card card-body">
+        <form class="card card-body" method="POST" target="/new-entry">
             <div class="mb-3 form-group">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" class="form-control" id="title" placeholder="Enter New Title" autofocus required>
@@ -23,10 +23,10 @@
             </div>
             <div class="mb-3 form-group">
                 <label for="descripcion" class="form-label">Description</label>
-                <textarea class="form-control" id="descripcion" placeholder="Enter Description" required cols="30"
+                <textarea class="form-control" id="descripcion" placeholder="Enter Description" required
                     rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" value="Save Book" class="btn btn-primary" />
         </form>
     </div>
 
